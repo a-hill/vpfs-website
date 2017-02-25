@@ -1485,6 +1485,9 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		button:hover,
+
+		/* Form button hover */
+
 		.button:hover {
 			box-shadow: inset 0 0 0 2px #ffe4b4;
 			color: #ffe4b4 !important;
@@ -1638,12 +1641,13 @@
 				color: #353865 !important;
 			}
 
+			/* Special button hover: was #ffe4b4 */
 			input[type="submit"].special:hover,
 			input[type="reset"].special:hover,
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #ffe4b4;
+				background-color: #c11919;
 			}
 
 			input[type="submit"].special:active,
@@ -3423,7 +3427,8 @@
 		}
 
 			.panel.spotlight.left .content {
-				background-image: linear-gradient(-90deg, transparent 0%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.175) 50%);
+				/* Commented out the dark fading on the background image under spotlight */
+				/* background-image: linear-gradient(-90deg, transparent 0%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.175) 50%); */
 			}
 
 		.panel.spotlight.right {
@@ -3434,7 +3439,8 @@
 		}
 
 			.panel.spotlight.right .content {
-				background-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.175) 50%);
+				/* Commented out the dark fading on the background image under spotlight */
+				/* background-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.125) 30%, rgba(0, 0, 0, 0.175) 50%); */
 			}
 
 	@media screen and (max-width: 736px) {
