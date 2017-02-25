@@ -42,6 +42,7 @@
                                         and this year I'm looking to step up my role and running to be your VPFS.
                                     <br>
                                         Take a read of my maifesto points here, and don't forget to vote!
+                                        <span id="widthTest"></span>
                                     </p>
                                     <!--Button to click to go to first panel-->
                                     <!--                                    <ul class="actions">
@@ -81,7 +82,9 @@
                                     </p>
 
                                 </div>
-                                <div class="image" data-position="top left">
+                                <!-- Spotlight, so is background image -->
+                                <div id="man-group-img" class="image tinted" data-position="top left">
+                                    <!-- Change all code in here in JS at bottom too -->
                                     <img src="images/man-group.png" alt="" />
                                 </div>
 							</section>
@@ -202,6 +205,31 @@
 
         <!-- Additional Javascript -->
             <script type="application/javascript">
+
+                $( document ).ready(function() {
+                    var widthTest = $(window).width();
+                    $( "#widthTest" ).html(widthTest);
+
+                    disableImagesAtSmallWidths();
+                });
+
+                $( window ).resize(function() {
+                    var widthTest = $(window).width();
+                    $( "#widthTest" ).html(widthTest);
+                    disableImagesAtSmallWidths();
+                });
+
+
+                function disableImagesAtSmallWidths() {
+                    var smallWidth = 736;
+                    if( $( window ).width() <= smallWidth ) {
+                        $( "#man-group-img" ).html("<img src=\"images/white.png\" alt=\"\" />");
+                    } else {
+                        $( "#man-group-img" ).html("<img src=\"images/man-group.png\" alt=\"\" />");
+                    }
+                }
+
+                /* Vote button (text) highlighting. Background is in CSS */
                 $( "#vote-button" ).hover(function () {
                     $( "#vote-text" ).css("color", "#ffffff");
                 }, function () {
